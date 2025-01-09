@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1
+Options -Indexes
+
+
+ErrorDocument 400 /index.php
+ErrorDocument 404 /404.php
+ErrorDocument 401 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 500 /index.php
+
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+#redireciona o https 
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
