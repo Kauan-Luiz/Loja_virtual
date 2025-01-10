@@ -1,20 +1,11 @@
+
 <?php 
 
-echo "<h1> oi eu sou o token</h1>";
+$token = filter_input(INPUT_GET, 'token', FILTER_VALIDATE_INT);
+if(!$token){
+?>
 
-/**
-echo '
- 
-
-  
- 
-  
-  
-  <!-- INICIO TOKEN MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-     
-
-
-        <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
+        <!-- INICIO TOKEN MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA --->
         <div class="alert alert-danger alert-has-icon">
           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
           <div class="alert-body">
@@ -23,11 +14,14 @@ echo '
           </div>
         </div>
         <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
+<?php exit(); } ?>
 
-      
 
-        <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-        <div class="alert alert-danger alert-has-icon">
+<?php 
+if(mb_strlen($token) < 10){
+?>
+ <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
+ <div class="alert alert-danger alert-has-icon">
           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
           <div class="alert-body">
             <div class="alert-title">Erro!</div>
@@ -36,9 +30,14 @@ echo '
         </div>
         <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
 
-     
-        <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-        <div class="alert alert-danger alert-has-icon">
+<?php  exit(); }?>
+
+
+<?php 
+  if($token > time() - 1){
+?>
+ <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
+ <div class="alert alert-danger alert-has-icon">
           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
           <div class="alert-body">
             <div class="alert-title">Erro!</div>
@@ -47,35 +46,15 @@ echo '
         </div>
         <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
 
+<?php exit(); }?>
 
 
-      <!-- FIM TOKEN MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-
-
-
-      <!-- INICIO TOKEN FORMULARIO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-     
-
-
-        <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-        <div class="alert alert-danger alert-has-icon">
-          <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
-          <div class="alert-body">
-            <div class="alert-title">Erro!</div>
-            Seu token é inválido!
-          </div>
-        </div>
-        <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-      
-      <!-- FIM TOKEN FORMULARIO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-
-
-      <!-- INICIO SUCESSO  MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-      
-
-
-        <!-- INICIO ALERTA SUCESSO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-        <div class="alert alert-success alert-has-icon">
+<?php 
+$sucessoMensagem = filter_input(INPUT_GET, 'sucesso', FILTER_VALIDATE_BOOLEAN);
+if($sucessoMensagem){
+?>
+ <!-- INICIO ALERTA SUCESSO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
+ <div class="alert alert-success alert-has-icon">
           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
           <div class="alert-body">
             <div class="alert-title">Sucesso!</div>
@@ -83,24 +62,21 @@ echo '
           </div>
         </div>
         <!-- FIM ALERTA SUCESSO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-      
-      <!-- FIM SUCESSO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
+<?php }?>
 
 
-      <!-- INICIO ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-      
-        <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-        <div class="alert alert-danger alert-has-icon">
+<?php 
+$erroMensagem = filter_input(INPUT_GET, 'erro', FILTER_VALIDATE_BOOLEAN);
+if($erroMensagem){
+?>
+<!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
+<div class="alert alert-danger alert-has-icon">
           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
           <div class="alert-body">
             <div class="alert-title">Erro!</div>
             Ocorreu um erro!
           </div>
         </div>
-        <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
+<!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
      
-      <!-- FIM ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->   
-
-';
-*/
-?>
+<?php }?>

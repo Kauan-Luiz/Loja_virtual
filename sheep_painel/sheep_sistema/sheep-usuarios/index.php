@@ -4,8 +4,8 @@
   <!-- INICIO NAVEGAÇÃO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="">Inicio</a></li>
-      <li class="breadcrumb-item"><a href="">Novo</a></li>
+      <li class="breadcrumb-item"><a href="sheep.php">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="<?= URL_CAMINHO_PAINEL . FILTROS . "sheep-usuarios/criar&token=".$_SESSION['timeWT']?>">Novo</a></li>
       <li class="breadcrumb-item active" aria-current="page">Listar</li>
     </ol>
   </nav>

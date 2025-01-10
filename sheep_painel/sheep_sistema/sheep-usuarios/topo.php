@@ -6,11 +6,11 @@
       <div class="card-body">
         <ul class="nav nav-pills" style="margin:5px; float:right;">
           <li class="nav-item">
-            <a class="nav-link active" href="<?=FILTROS?>sheep-usuarios/criar">Novo</a>
+            <a class="nav-link active" href="<?=FILTROS?>sheep-usuarios/criar&token=<?=$_SESSION['timeWT']?>">Novo</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="" style="margin-left:5px;"><span class="badge badge-primary"><i class="fas fa-print"></i> </span></a>
+            <a class="nav-link active" href="<?=FILTROS?>sheep-usuarios/imprimir&token=<?=$_SESSION['timeWT']?>" style="margin-left:5px;"><span class="badge badge-primary"><i class="fas fa-print"></i> </span></a>
           </li>
 
         </ul>

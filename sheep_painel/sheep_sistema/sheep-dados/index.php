@@ -5,7 +5,7 @@
      <!-- INICIO NAVEGAÇÃO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
      <nav aria-label="breadcrumb">
        <ol class="breadcrumb">
-         <li class="breadcrumb-item"><a href="">Inicio</a></li>
+         <li class="breadcrumb-item"><a href="sheep.php">Inicio</a></li>
 
          <li class="breadcrumb-item active" aria-current="page">Dados</li>
        </ol>
@@ -14,79 +14,9 @@
 
      <section class="section">
 
-       <!-- INICIO MENSAGENS DE SUCESSO E ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-       
-
-         <!-- INICIO ALERTA SUCESSO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-         <div class="alert alert-success alert-has-icon">
-           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
-           <div class="alert-body">
-             <div class="alert-title">Sucesso!</div>
-             Tudo certo.
-           </div>
-         </div>
-         <!-- FIM ALERTA SUCESSO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-       
-
-         <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-         <div class="alert alert-danger alert-has-icon">
-           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
-           <div class="alert-body">
-             <div class="alert-title">Erro!</div>
-             Ocorreu um erro, verifique sua conexão com internet ou, atualize a sua página.
-           </div>
-         </div>
-         <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-       
-       <!-- FIM MENSAGENS DE SUCESSO E ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-
-
-
-       <!-- INICIO TOKEN MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-
-
-
-
-         <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-         <div class="alert alert-danger alert-has-icon">
-           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
-           <div class="alert-body">
-             <div class="alert-title">Erro!</div>
-             Seu token de sessão expirou!
-           </div>
-         </div>
-         <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-
-       
-
-         <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-         <div class="alert alert-danger alert-has-icon">
-           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
-           <div class="alert-body">
-             <div class="alert-title">Erro!</div>
-             Seu token de sessão é inválido!
-           </div>
-         </div>
-         <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-
-       
-         <!-- INICIO ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-         <div class="alert alert-danger alert-has-icon">
-           <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
-           <div class="alert-body">
-             <div class="alert-title">Erro!</div>
-             O que está tentando fazer? Dê um clique por vez
-           </div>
-         </div>
-         <!-- FIM ALERTA ERRO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-
-
-
-      
-       <!-- FIM TOKEN MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
-
-
-
+    <!--INICIO MENSAGEM DE RETORNO clientesPR.COM.BR MAYKON SILVEIRA--->
+     <?php include_once 'token.php'; ?>
+    <!--FIM LINKSMENSAGEM DE RETORNO clientesPR.COM.BR MAYKON SILVEIRA---> 
 
 
        <form action="" method="post" enctype="multipart/form-data">

@@ -6,8 +6,8 @@
           <!-- INICIO NAVEGAÇÃO MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA--->
            <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="<?=URL_CAMINHO_PAINEL . FILTROS?>/sheep-usuarios/index"> Listar </a></li>
+                        <li class="breadcrumb-item"><a href="sheep.php">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="<?=URL_CAMINHO_PAINEL . FILTROS?>/sheep-usuarios/index&token=<?$_SESSION['timeWT']?>"> Listar </a></li>
                         <li class="breadcrumb-item active" aria-current="page">Criar</li>
                       </ol>
            </nav>
@@ -19,7 +19,7 @@
             <?php include_once 'token.php'; ?>
             <!--FIM LINKSMENSAGEM DE RETORNO clientesPR.COM.BR MAYKON SILVEIRA--->
 
-            <form action="<?=URL_CAMINHO_PAINEL . FILTROS ?>sheep-usuarios/filtros/criar" method="post" enctype="multipart/form-data">
+            <form action="<?=URL_CAMINHO_PAINEL . FILTROS ?>sheep-usuarios/filtros/criar&token=<?$_SESSION['timeWT']?>" method="post" enctype="multipart/form-data">
   
 
            <div class="section-body" >
@@ -185,17 +185,17 @@
                       <div class="col-sm-12 col-md-7">
                           <select class="form-control selectric" name="status">
                           <option value="S">Publicado</option>
-                          <option value="R">Rascunho</option>
-                          <option value="P">Pendente</option>
-                          <option value="C">Cancelado</option>
+                          <option value="N">Cancelado</option>
                         </select>
                       </div>
                     </div>
                    
                       
-                      <input type="hidden" name="usuario" value="<">
-                      <input type="hidden" name="sheep_firewall" value="">
-                      <input type="hidden" name="tipo" value="">
+                      <input type="hidden" name="usuario" value="1">
+                      <input type="hidden" name="sheep_firewall" value="123">
+                      <input type="hidden" name="tipo" value="usuario">
+                      <input type="hidden" name="tipo_cadastro" value="criar">
+                      
                     <div class="form-group row mb-4">
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                       <div class="col-sm-12 col-md-7">

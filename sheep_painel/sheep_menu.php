@@ -16,7 +16,7 @@
       <li class="dropdown">
         <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="cpu"></i><span>Configurações</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="<?= FILTROS ?>sheep-dados/index">Configurações</a></li>
+          <li><a class="nav-link" href="<?= FILTROS ?>sheep-dados/index&token=<?=$_SESSION['timeWT']?>">Configurações</a></li>
         
         </ul>
       </li>
@@ -25,7 +25,7 @@
       <li class="dropdown">
         <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="trending-up"></i><span>Usuarios</span></a>
         <ul class="dropdown-menu">
-          <li><a href="<?= FILTROS ?>sheep-usuarios/index&token=">Listar</a></li>
+          <li><a href="<?= FILTROS ?>sheep-usuarios/index&token=<?=$_SESSION['timeWT']?>">Listar</a></li>
          
 
         </ul>

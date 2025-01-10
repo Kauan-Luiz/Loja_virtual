@@ -1,6 +1,10 @@
 <!-- Main Content -->
 <div class="main-content">
 
+<!--INICIO MENSAGEM DE RETORNO clientesPR.COM.BR MAYKON SILVEIRA--->
+<?php include_once 'token.php'; ?>
+<!--FIM LINKSMENSAGEM DE RETORNO clientesPR.COM.BR MAYKON SILVEIRA--->
+
 <?php 
 
 $criar = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
